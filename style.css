@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.logo h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: red;
+    font-size: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+
+button.chat-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* Container: Ensure it's 100% width and flex split */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Left side remains as before, now taking exactly 50% */
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Set direction to column */
+    padding: 50px;
+    background-color: white;
+    width: 50%;
+    position: relative; /* Allow absolute positioning inside */
+}
+
+/* Left Side Content */
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h1 span {
+    color: #ff4800;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+button.hire-me {
+    background-color: #1b72d5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+a.projects-link {
+    display: inline-block;
+    font-size: 16px;
+    color: white;
+    background-color: #8314d2; /* Different color from hire me */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-left: 20px;
+    margin-top: 20px; /* Added margin to create space */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+a.projects-link:hover {
+    background-color: #218838;
+}
+
+/* Stats Section */
+.stats {
+    margin-top: 20px; /* Space above stats */
+    padding: 20px;
+}
+
+.stats p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.stats span {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.contact {
+    margin-top: 40px;
+}
+
+.contact h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Highlighting the "5 Projects Done" Line */
+.projects-done {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4800;
+    margin-top: 30px; /* Added margin for spacing */
+    text-align: center;
+    position: relative;
+}
+
+.projects-done::after {
+    content: '';
+    width: 50%;
+    height: 4px;
+    background-color: #ffda00;
+    display: block;
+    margin: 10px auto 0 auto; /* Center underline with spacing */
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.projects-done:hover::after {
+    width: 100%; /* Animate underline on hover */
+}
+
+/* Project Stats Section at Bottom Left */
+.project-stats {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    padding: 30px; /* Increased padding for a comfortable look */
+    background-color: #000; /* Black background */
+    border-radius: 0; /* Remove border-radius to cover full width */
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1); /* Shadow at the top */
+    color: white;
+}
+
+.project-stats h4 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffda00; /* Highlight heading with yellow */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-stats ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-stats li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #333; /* Dark background for list items */
+    border-radius: 8px;
+    border: 1px solid #444;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.project-stats li span {
+    font-weight: bold;
+    color: #ff4800;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+button.know-more {
+    background-color: #ffda00;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button.know-more:hover {
+    background-color: #ffc107;
+}
+
+/* Right Side */
+.right {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    padding: 0;
+    width: 50%;
+}
+
+.right .profile-img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* Profile Image Styling */
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.follow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.follow input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: 250px;
+    outline: none;
+}
+
+.follow button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
